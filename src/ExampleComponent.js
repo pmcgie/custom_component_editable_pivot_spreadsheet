@@ -105,7 +105,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
         return  <div style={{height: '100vh', width: '100vw'}}>
         <HotTable
             columnSorting={(Boolean(model.columnSorting))}
-            ManualColumnFreeze = {true}
+            ManualColumnFreeze = {(Boolean(model.ManualColumnFreeze))}
             data={formatted_data.data}
             licenseKey="non-commercial-and-evaluation"
             autoColumnSize={true}
