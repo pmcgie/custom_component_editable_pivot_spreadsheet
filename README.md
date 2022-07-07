@@ -14,4 +14,5 @@ After starting the webpack dev server with `yarn dev` and the example dev server
 ```html
 <script type="text/javascript" src="http://localhost:8080/index.js" />
 ```
-
+'''iframe code cdn
+<script src="https://cdn.jsdelivr.net/gh/pmcgie/custom_component_editable_pivot_spreadsheet@latest/dist/index.js" />
