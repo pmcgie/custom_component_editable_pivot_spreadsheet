@@ -8,6 +8,7 @@ module.exports = {
     publicPath: "/",
   },
   devServer: {
+    https: true,
     historyApiFallback: true,
     allowedHosts: 'all',
     headers: {
