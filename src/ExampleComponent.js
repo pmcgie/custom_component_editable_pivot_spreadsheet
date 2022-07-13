@@ -108,7 +108,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             columnSorting={(Boolean(model.columnSorting))}
             contextMenu={(Boolean(model.contextMenu))}
             manualColumnFreeze = {(Boolean(model.manualColumnFreeze))}
-            fixedColumnsStart = {1}
+            fixedColumnsLeft = {1}
             data={formatted_data.data}
             licenseKey="non-commercial-and-evaluation"
             autoColumnSize={true}
