@@ -106,6 +106,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
         return  <div style={{height: '100vh', width: '100vw'}}>
         <HotTable
             columnSorting={(Boolean(model.columnSorting))}
+            ContextMenu={(Boolean(model.ContextMenu))}
             manualColumnFreeze = {(Boolean(model.ManualColumnFreeze))}
             fixedColumnsStart = {1}
             data={formatted_data.data}
