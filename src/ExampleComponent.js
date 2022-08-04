@@ -5,7 +5,7 @@ import find from 'lodash/find'
 import filter from 'lodash/filter'
 import { HotTable, HotColumn } from "@handsontable/react";
 import "handsontable/dist/handsontable.min.css";
-import { registerPlugin, AutoColumnSize, Autofill, ColumnSummary, ColumnSorting, ManualColumnFreeze, ContextMenu, DropdownMenu} from 'handsontable/plugins';
+import { registerPlugin, AutoColumnSize, Autofill, ColumnSummary, ColumnSorting, ManualColumnFreeze, ContextMenu, DropdownMenu, UndoRedo} from 'handsontable/plugins';
 import { HyperFormula } from 'hyperformula';
 import { applyGrand, applyRow, applySub, changesToData, dataToRows } from './helpers';
 registerPlugin(AutoColumnSize);
@@ -15,7 +15,7 @@ registerPlugin(ColumnSorting );
 registerPlugin(ManualColumnFreeze);
 registerPlugin(ContextMenu);
 registerPlugin(DropdownMenu);
-    
+registerPlugin(UndoRedo);
 
 const hf = HyperFormula.buildEmpty({
     // to use an external HyperFormula instance,
@@ -106,6 +106,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
         return  <div style={{height: '100vh', width: '100vw'}}>
         <HotTable
             columnSorting={(Boolean(model.columnSorting))}
+            undoRedo={(Boolean(model.undoRedo))}
             contextMenu={(Boolean(model.contextMenu))}
             manualColumnFreeze={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?true:false}
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
