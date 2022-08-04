@@ -5,7 +5,6 @@ import find from 'lodash/find'
 import filter from 'lodash/filter'
 import { HotTable, HotColumn } from "@handsontable/react";
 import "handsontable/dist/handsontable.min.css";
-import Handsontable from 'handsontable';
 import { registerPlugin, AutoColumnSize, Autofill, ColumnSummary, ColumnSorting, ManualColumnFreeze, ContextMenu, DropdownMenu, UndoRedo} from 'handsontable/plugins';
 import { HyperFormula } from 'hyperformula';
 import { applyGrand, applyRow, applySub, changesToData, dataToRows } from './helpers';
@@ -111,6 +110,8 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
                 undo:true,
                 redo:true
             }}
+            undo={true}
+            redo={true}
             contextMenu={(Boolean(model.contextMenu))}
             manualColumnFreeze={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?true:false}
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
