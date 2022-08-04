@@ -106,12 +106,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
         return  <div style={{height: '100vh', width: '100vw'}}>
         <HotTable
             columnSorting={(Boolean(model.columnSorting))}
-            undoRedo={{
-                undo:true,
-                redo:true
-            }}
-            undo={true}
-            redo={true}
+            undoRedo={true}
             contextMenu={(Boolean(model.contextMenu))}
             manualColumnFreeze={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?true:false}
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
