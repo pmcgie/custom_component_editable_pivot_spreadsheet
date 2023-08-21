@@ -16,7 +16,7 @@ registerPlugin(ManualColumnFreeze);
 registerPlugin(ContextMenu);
 registerPlugin(DropdownMenu);
 registerPlugin(UndoRedo);
-registerPlugin(colWidths)
+registerPlugin(colWidths);
 
 const hf = HyperFormula.buildEmpty({
     // to use an external HyperFormula instance,
@@ -123,6 +123,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             allowInsertRow={false}
             allowInsertColumn={false}
             formulas={{engine: hf, sheetName}}
+            colWidths={100}
             colHeaders={formatted_data.columns.map(c=>{
                 if (model.labels) {
                     return model.labels[model.fields.indexOf(c)] || c
