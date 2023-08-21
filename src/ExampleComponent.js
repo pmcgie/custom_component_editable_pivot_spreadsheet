@@ -113,7 +113,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
             data={formatted_data.data}
             licenseKey="non-commercial-and-evaluation"
-            autoColumnSize={true}
+            autoColumnSize={false}
             fillHandle={{
                 autoInsertRow: false,
                 autoInsertColumn: false
