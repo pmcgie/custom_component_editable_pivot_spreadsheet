@@ -5,7 +5,7 @@ import find from 'lodash/find'
 import filter from 'lodash/filter'
 import { HotTable, HotColumn } from "@handsontable/react";
 import "handsontable/dist/handsontable.min.css";
-import { registerPlugin, AutoColumnSize, Autofill, ColumnSummary, ColumnSorting, ManualColumnFreeze, ContextMenu, DropdownMenu, UndoRedo} from 'handsontable/plugins';
+import { registerPlugin, AutoColumnSize, Autofill, ColumnSummary, ColumnSorting, ManualColumnFreeze, ContextMenu, DropdownMenu, UndoRedo, colWidths} from 'handsontable/plugins';
 import { HyperFormula } from 'hyperformula';
 import { applyGrand, applyRow, applySub, changesToData, dataToRows } from './helpers';
 registerPlugin(AutoColumnSize);
@@ -16,6 +16,7 @@ registerPlugin(ManualColumnFreeze);
 registerPlugin(ContextMenu);
 registerPlugin(DropdownMenu);
 registerPlugin(UndoRedo);
+registerPlugin(colWidths)
 
 const hf = HyperFormula.buildEmpty({
     // to use an external HyperFormula instance,
