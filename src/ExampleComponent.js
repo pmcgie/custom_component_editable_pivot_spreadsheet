@@ -112,7 +112,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             manualColumnFreeze={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?true:false}
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
             data={formatted_data.data}
-            licenseKey="non-commercial-and-evaluation"
+            licenseKey={licenseKey}
             /*autoColumnSize={true}*/
             colWidths={'120'}
             fillHandle={{
