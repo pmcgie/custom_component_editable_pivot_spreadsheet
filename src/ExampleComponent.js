@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import licenseKey from '../license_info'
 import './styles.css'
 import isEqual from 'lodash/isEqual'
 import find from 'lodash/find'
@@ -21,7 +20,7 @@ registerPlugin(UndoRedo);
 const hf = HyperFormula.buildEmpty({
     // to use an external HyperFormula instance,
     // initialize it with the `'internal-use-in-handsontable'` license key
-    licenseKey: licenseKey,
+    licenseKey: 'internal-use-in-handsontable'
 });
 const sheetName = hf.addSheet("main");
 const sheetId = hf.getSheetId(sheetName);
@@ -112,7 +111,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             manualColumnFreeze={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?true:false}
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
             data={formatted_data.data}
-            licenseKey={licenseKey}
+            licenseKey="non-commercial-and-evaluation"
             /*autoColumnSize={true}*/
             colWidths={'120'}
             fillHandle={{
