@@ -113,7 +113,8 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             fixedColumnsLeft={(model.fixedColumnsLeft && Number(model.fixedColumnsLeft)>0)?model.fixedColumnsLeft:0}
             data={formatted_data.data}
             licenseKey="non-commercial-and-evaluation"
-            autoColumnSize={false}
+            /*autoColumnSize={true}*/
+            colWidths='120'
             fillHandle={{
                 autoInsertRow: false,
                 autoInsertColumn: false
@@ -123,7 +124,6 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             allowInsertRow={false}
             allowInsertColumn={false}
             formulas={{engine: hf, sheetName}}
-            colWidths={100}
             colHeaders={formatted_data.columns.map(c=>{
                 if (model.labels) {
                     return model.labels[model.fields.indexOf(c)] || c
