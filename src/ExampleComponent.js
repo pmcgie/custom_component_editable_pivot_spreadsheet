@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import licenseKey from '../license_info'
 import './styles.css'
 import isEqual from 'lodash/isEqual'
 import find from 'lodash/find'
@@ -20,7 +21,7 @@ registerPlugin(UndoRedo);
 const hf = HyperFormula.buildEmpty({
     // to use an external HyperFormula instance,
     // initialize it with the `'internal-use-in-handsontable'` license key
-    licenseKey: 'internal-use-in-handsontable',
+    licenseKey: licenseKey,
 });
 const sheetName = hf.addSheet("main");
 const sheetId = hf.getSheetId(sheetName);
