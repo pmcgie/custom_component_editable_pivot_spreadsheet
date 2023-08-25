@@ -114,7 +114,7 @@ const ExampleSpreadsheet = ({ triggerQuery, model, modelUpdate }) => {
             data={formatted_data.data}
             licenseKey="non-commercial-and-evaluation"
             /*autoColumnSize={true}*/
-            colWidths='120'
+            colWidths={'120'}
             fillHandle={{
                 autoInsertRow: false,
                 autoInsertColumn: false
