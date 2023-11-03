@@ -1,3 +1,4 @@
+import { licenseKey } from '../config.json';
 import isEqual from "lodash/isEqual";
 import orderBy from "lodash/orderBy";
 import find from "lodash/find";

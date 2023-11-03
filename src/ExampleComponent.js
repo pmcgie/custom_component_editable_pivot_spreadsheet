@@ -21,7 +21,7 @@ registerPlugin(UndoRedo);
 const hf = HyperFormula.buildEmpty({
     // to use an external HyperFormula instance,
     // initialize it with the `'internal-use-in-handsontable'` license key
-    licenseKey: licenseKey
+    licenseKey: { licenseKey }
 });
 const sheetName = hf.addSheet("main");
 const sheetId = hf.getSheetId(sheetName);
